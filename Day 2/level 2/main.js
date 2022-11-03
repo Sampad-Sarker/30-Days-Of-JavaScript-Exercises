@@ -22,6 +22,14 @@ console.log(parseInt('10') == 10);
 console.log(parseFloat('9.8') == 10);
 console.log(Math.ceil(parseFloat('9.8')) == 10);
 
+// 5. Check if 'on' is found in both python and jargon
+console.log(`python`.includes(`on`));
+console.log(`jargon`.includes(`on`));
+
+// 6. I hope this course is not full of jargon. Check if jargon is in the sentence.
+let txt = `I hope this course is not full of jargon.`
+console.log(txt.includes(`jargon`));
+
 
 
 
