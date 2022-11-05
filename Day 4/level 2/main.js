@@ -29,19 +29,23 @@ March, April or May, the season is Spring
 June, July or August, the season is Summer
 */ 
 
-// let month = prompt(`Enter the month`).toLowerCase()
+let month = prompt(`Enter the month`)
 
-// if (month === 'september' || month === 'october' || month ==='november') {
-//     console.log(`Month : ${month}, the season is Autumn.`)
-// } else if(month === 'december' || month === 'january' || month ==='february'){
-//     console.log(`Month : ${month}, the season is Winter.`)
-// } else if(month === 'march' || month === 'april' || month ==='may') {
-//     console.log(`Month : ${month}, the season is Spring.`)
-// } else if(month === 'june' || month === 'july' || month === 'august'){
-//     console.log(`Month : ${month}, the season is Summer.`)
-// } else {
-//     console.log(`Month : ${month}, typo, put proper month.`)
-// }
+function capitalize(word){
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
+
+if (month === 'september' || month === 'october' || month ==='november') {
+    console.log(`Month : ${capitalize(month)}, the season is Autumn.`)
+} else if(month === 'december' || month === 'january' || month ==='february'){
+    console.log(`Month : ${capitalize(month)}, the season is Winter.`)
+} else if(month === 'march' || month === 'april' || month ==='may') {
+    console.log(`Month : ${capitalize(month)}, the season is Spring.`)
+} else if(month === 'june' || month === 'july' || month === 'august'){
+    console.log(`Month : ${capitalize(month)}, the season is Summer.`)
+} else {
+    console.log(`Month : ${capitalize(month)}, typo, put proper month.`)
+}
 
 /*
 3. Check if a day is weekend day or a working day. Your script will take day as an input.
@@ -58,19 +62,19 @@ June, July or August, the season is Summer
     Friday is a working day.
 */ 
 
-let day = prompt('What is the day today?')
+// let day = prompt('What is the day today?')
 
 
-function capitalize(word){
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-}
+// function capitalize(word){
+//     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+// }
 
-switch (day) {
-    case 'saturday' || 'sunday':
-        console.log(`What is the day today? ${day}\n${capitalize(day)} is a weekend.`)
-        break
+// switch (day) {
+//     case 'saturday' || 'sunday':
+//         console.log(`What is the day today? ${day}\n${capitalize(day)} is a weekend.`)
+//         break
 
-    default:
-        console.log(`What is the day today? ${day}\n${capitalize(day)} is a working day.`)
-        break
-}
+//     default:
+//         console.log(`What is the day today? ${day}\n${capitalize(day)} is a working day.`)
+//         break
+// }
