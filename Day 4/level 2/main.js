@@ -7,19 +7,19 @@
 0-49, F
 */ 
 
-// let score = prompt(`Enter your score`)
+let score = prompt(`Enter your score`)
 
-// if (score >= 80 && score <= 100) {
-//     console.log(`Your score : ${score}\nYour grade : A`)
-// } else if(score >= 70 && score <= 89){
-//     console.log(`Your score : ${score}\nYour grade : B`)
-// } else if(score >= 60 && score <= 69){
-//     console.log(`Your score : ${score}\nYour grade : C`)
-// } else if(score >= 50 && score <= 59){
-//     console.log(`Your score : ${score}\nYour grade : D`)
-// } else {
-//     console.log(`Your score : ${score}\nYour grade : F`)
-// }
+if (score >= 80 && score <= 100) {
+    console.log(`Your score : ${score}\nYour grade : A`)
+} else if(score >= 70 && score <= 89){
+    console.log(`Your score : ${score}\nYour grade : B`)
+} else if(score >= 60 && score <= 69){
+    console.log(`Your score : ${score}\nYour grade : C`)
+} else if(score >= 50 && score <= 59){
+    console.log(`Your score : ${score}\nYour grade : D`)
+} else {
+    console.log(`Your score : ${score}\nYour grade : F`)
+}
 
 /*
 2. Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
@@ -62,19 +62,19 @@ if (month === 'september' || month === 'october' || month ==='november') {
     Friday is a working day.
 */ 
 
-// let day = prompt('What is the day today?')
+let day = prompt('What is the day today?')
 
 
-// function capitalize(word){
-//     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-// }
+function capitalize(word){
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
 
-// switch (day) {
-//     case 'saturday' || 'sunday':
-//         console.log(`What is the day today? ${day}\n${capitalize(day)} is a weekend.`)
-//         break
+switch (day) {
+    case 'saturday' || 'sunday':
+        console.log(`What is the day today? ${day}\n${capitalize(day)} is a weekend.`)
+        break
 
-//     default:
-//         console.log(`What is the day today? ${day}\n${capitalize(day)} is a working day.`)
-//         break
-// }
+    default:
+        console.log(`What is the day today? ${day}\n${capitalize(day)} is a working day.`)
+        break
+}
