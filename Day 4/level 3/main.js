@@ -13,21 +13,21 @@
   February has 28 days.
 */ 
 
-// let month = prompt(`Enter a month`)
+let month = prompt(`Enter a month`)
 
-// const months = ['january','february','march','april','may','june','july','august','september','october','november','december']
+const months = ['january','february','march','april','may','june','july','august','september','october','november','december']
 
-// const days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+const days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-// function capitalize(word){
-//     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-// }
+function capitalize(word){
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
 
-// let month_lowerCase = capitalize(month).toLowerCase()
-// let index = months.indexOf(month_lowerCase)
+let month_lowerCase = capitalize(month).toLowerCase()
+let index = months.indexOf(month_lowerCase)
 
-// console.log(`Enter a month: ${month}`);
-// console.log(`${capitalize(month)} has ${days[index]} days`);
+console.log(`Enter a month: ${month}`);
+console.log(`${capitalize(month)} has ${days[index]} days`);
 
 
 
