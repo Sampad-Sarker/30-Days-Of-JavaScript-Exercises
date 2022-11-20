@@ -70,7 +70,7 @@ console.log(`${exceptLastElement.join(', ')} and ${itCompanies[itCompanies.lengt
 
 
 
-// const companyName = prompt(`Put the company name`).toLowerCase()
+const companyName = prompt(`Put the company name`).toLowerCase()
 
 const lowerCaseOfItCompanies = []
 
@@ -108,7 +108,7 @@ itCompanies.forEach((company)=>{
 
 //15. Sort the array using sort() method
 
-const sortedCompanies = [...itCompanies]
+const sortedCompanies = [...itCompanies]//copy the array
 
 console.log(`Sort the array\n${sortedCompanies.sort()}`)
 
@@ -159,7 +159,7 @@ console.log(`Remove the last IT company\n${itCompanies.splice(itCompanies.length
 console.log(`(now the original list :${itCompanies})`)
 
 //23. Remove all IT companies
-console.log(`Remove all IT companies\n${itCompanies.splice(0)}`);
+console.log(`Remove all IT companies\n${itCompanies.splice()}`);
 console.log(`(now the original list :${itCompanies})`)
 
 
