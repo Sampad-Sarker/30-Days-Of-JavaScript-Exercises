@@ -88,11 +88,12 @@ if (countries.length % 2 === 0) {
   console.log(
     `second half :`,
     countries.slice(medianPointOfCountries, countries.length)
-  );
+  )
 } else {
   console.log(`first half :`, countries.slice(0, medianPointOfCountries + 1));
   console.log(
     `second half :`,
     countries.slice(medianPointOfCountries + 1, countries.length)
-  );
+  )
 }
+
