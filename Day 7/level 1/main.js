@@ -226,6 +226,8 @@ function checkSeason(month) {
   } else if (month === `june` || month === `july` || month === `august`) {
     // console.log(`Summer`);
     return `Summer`;
+  } else {
+    return `Invalid month`;
   }
 }
 
@@ -246,5 +248,5 @@ function findMax() {
   return numbers[numbers.length - 1];
 }
 
-console.log(findMax(0, 10, 5));
-console.log(findMax(0, -10, -2));
+console.log(`Max number :`,findMax(0, 10, 5));
+console.log(`Max number :`,findMax(0, -10, -2));
