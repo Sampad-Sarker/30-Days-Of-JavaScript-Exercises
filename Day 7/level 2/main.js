@@ -479,21 +479,18 @@ function randomHexaNumberGenerator() {
 
 console.log(`a random hexadecimal number:\n`, randomHexaNumberGenerator());
 
-
 //18. Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
 
-const characterSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJHIJKLMNOPQRSTUVWXYZ0123456789"
-let id = ``
+const characterSet =
+  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJHIJKLMNOPQRSTUVWXYZ0123456789";
+let id = ``;
 function userIdGenerator() {
-
-  for (let i = 0; i <= 6; i++){
-    let randomIndexPosition = parseInt(Math.random() * characterSet.length)
-    id += characterSet[randomIndexPosition]
+  for (let i = 0; i <= 6; i++) {
+    let randomIndexPosition = parseInt(Math.random() * characterSet.length);
+    id += characterSet[randomIndexPosition];
   }
 
-  return id
+  return id;
 }
 
 console.log(`generates seven character id:\n`, userIdGenerator());
-
-
