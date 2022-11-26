@@ -290,112 +290,332 @@ console.log(`shuffled Array :`, shuffleArray(mainArray));
 //9. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
 
 const factorial = (number) => {
-  let fact = 1
-  if(number >= 0) {
-    for (let i = number; i >= 1; i--){
-      fact *= i
+  let fact = 1;
+  if (number >= 0) {
+    for (let i = number; i >= 1; i--) {
+      fact *= i;
     }
-    return fact
+    return fact;
   } else {
-    return `${number} is a negative number, so factorial is not possible`
+    return `${number} is a negative number, so factorial is not possible`;
   }
+};
+// let numberToBeFactorial = prompt(`Enter number to perform factorial :`)
 
-}
-// let numberToBeFactorial = prompt(`Enter number to perform factorial :`) 
+let numberToBeFactorial = 5; //take input by prompt() for dynamically
 
-let numberToBeFactorial = 5 //take input by prompt() for dynamically
-
-console.log(`factorial of ${numberToBeFactorial} is:`, factorial(numberToBeFactorial));
+console.log(
+  `factorial of ${numberToBeFactorial} is:`,
+  factorial(numberToBeFactorial)
+);
 
 //10. Call your function isEmpty, it takes a parameter and it checks if it is empty or not
 
-
 const isEmpty = (value) => {
-  
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     if (value.length === 0) {
-      console.log(`it is an empty string`)
+      console.log(`it is an empty string`);
     } else {
       console.log(`it is not empty string`);
-    };
-  } else if (Array.isArray(value)) {
-    if (value.length === 0) { 
-      console.log(`it is an empty array`)
-    } else {
-      console.log(`it is not empty array`)
     }
-  } else if (typeof value === 'object') {
-      if (Object.keys(value).length === 0) { 
-        console.log(`it is an empty object`)
-      } else {
-        console.log(`it is not empty object`)
-      }
+  } else if (Array.isArray(value)) {
+    if (value.length === 0) {
+      console.log(`it is an empty array`);
+    } else {
+      console.log(`it is not empty array`);
+    }
+  } else if (typeof value === "object") {
+    if (Object.keys(value).length === 0) {
+      console.log(`it is an empty object`);
+    } else {
+      console.log(`it is not empty object`);
+    }
   } else if (value === undefined) {
-      console.log(`it is an empty variable` ) 
+    console.log(`it is an empty variable`);
   } else {
-    console.log(`it is not empty`)
-  }    
-
-
-  
-}
-
+    console.log(`it is not empty`);
+  }
+};
 
 console.log(`checks if the parameter is empty or not :`);
-isEmpty()
+isEmpty();
 
-let a = 4
-isEmpty(a)
+let a = 4;
+isEmpty(a);
 
-let b
-isEmpty(b)
+let b;
+isEmpty(b);
 
-isEmpty(``)
-isEmpty(`sam`)
+isEmpty(``);
+isEmpty(`sam`);
 
+isEmpty([]);
+isEmpty([7, 9]);
 
-isEmpty([])
-isEmpty([7,9])
-
-isEmpty({})
-isEmpty({a:2})
-
+isEmpty({});
+isEmpty({ a: 2 });
 
 //11. Call your function sum, it takes any number of arguments and it returns the sum.
 
 const sum = (...arg) => {
-  let total = 0
-  
+  let total = 0;
+
   // for (let i = 0; i < arg.length; i++) {
   //   total += arg[i]
   // }
   for (const number of arg) {
-    total += number
+    total += number;
   }
 
-  return total
-}
+  return total;
+};
 console.log(`takes any number of arguments and return the sum :`);
-console.log(sum(1,2,3));
-console.log(sum(4,7,8,2,5,9));
-console.log(sum(2,-10,5,7));
-console.log(sum(1,2,3,4,5,6,7,8,9));
+console.log(`sum(1,2,3) sum : ${sum(1, 2, 3)}`);
+console.log(`sum(4,7,8,2,5,9) sum : ${sum(4, 7, 8, 2, 5, 9)}`);
+console.log(`sum(2,-10,5,7) sum : ${sum(4, 7, 8, 2, 5, 9)}`);
+console.log(`sum(1,2,3,4,5,6,7,8,9) sum : ${sum(1, 2, 3, 4, 5, 6, 7, 8, 9)}`);
+
+//12. Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+
+const sumOfArrayItems = (numbersArray) => {
+  for (const number of numbersArray) {
+    if (typeof number !== "number") {
+      return `array item not number type like "${number}"`;
+    }
+  }
+
+  let sum = 0;
+  for (const number of numbersArray) {
+    sum += number;
+  }
+
+  return sum;
+};
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(`[${numbers}] sum of all the items : ${sumOfArrayItems(numbers)}`);
+numbers = [1, 2, 3, `four`, 5, 6, 7, 8, 9];
+console.log(`[${numbers}] sum of all the items : ${sumOfArrayItems(numbers)}`);
+numbers = [10, 11, 12];
+console.log(`[${numbers}] sum of all the items : ${sumOfArrayItems(numbers)}`);
+numbers = [10, 11, [12, 7], 5, 3, 8];
+console.log(`[${numbers}] sum of all the items : ${sumOfArrayItems(numbers)}`);
+numbers = ["one", 2, 3, 4, 5, "six", 7, 8, 9];
+console.log(`[${numbers}] sum of all the items : ${sumOfArrayItems(numbers)}`);
+
+//13. Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
+
+const average = (numbersArray) => {
+  for (const number of numbersArray) {
+    if (typeof number !== "number") {
+      return `array item not number type like "${number}"`;
+    }
+  }
+
+  let sum = 0;
+  for (const number of numbersArray) {
+    sum += number;
+  }
+
+  let average = sum / numbersArray.length;
+  return average;
+};
+
+let numbers_ = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(`[${numbers_}] average of all the items : ${average(numbers_)}`);
+
+numbers_ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(`[${numbers_}] average of all the items : ${average(numbers_)}`);
+
+numbers_ = [1, 2, 3, 4, "five", 6, 7, 8, 9];
+console.log(`[${numbers_}] average of all the items : ${average(numbers_)}`);
+
+numbers_ = ["one", 2, 3, 4, 5, `six`];
+console.log(`[${numbers_}] average of all the items : ${average(numbers_)}`);
+
+numbers_ = [1, 2, 3, "four"];
+console.log(`[${numbers_}] average of all the items : ${average(numbers_)}`);
+
+numbers_ = [1, 2, 3, [4, 5, 6, 7], 8, 9];
+console.log(`[${numbers_}] average of all the items : ${average(numbers_)}`);
+
+//14. Write a function called modifyArray takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+
+const modifyArray = (array) => {
+  if (array.length < 5) {
+    return `item not found`;
+  }
+  //fifth item
+  array[4] = array[4].toUpperCase();
+
+  return array;
+};
+
+let fruits = ["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"];
+console.log(`modifies the fifth item of the array :\n`, modifyArray(fruits));
+
+let companies = ["Google", "Facebook", "Apple", "Amazon", "Microsoft", "IBM"];
+console.log(`modifies the fifth item of the array :\n`, modifyArray(companies));
+
+companies = ["Google", "Facebook", "Apple", "Amazon"];
+console.log(`modifies the fifth item of the array :\n`, modifyArray(companies));
+
+//15. Write a function called isPrime, which checks if a number is prime number.
+
+const isPrime = (number) => {
+  let prime = true;
+  let divider;
+
+  if (number === 1) {
+    return `${number} is a prime number by definition`;
+  } else if (number > 1) {
+    for (let i = 2; i < number; i++) {
+      if (number % i === 0) {
+        prime = false;
+        divider = i;
+
+        break;
+      }
+    }
+
+    if (prime === true) {
+      return `${number} is a prime number `;
+    } else {
+      return `${number} is not a prime number, it is divided by ${divider}`;
+    }
+  } else {
+    return `The negative number is not a prime number.`;
+  }
+};
+
+// let yourNumber = prompt(`Enter your number :`)
+let yourNumber = 1; //take input by prompt() for dynamically
+console.log(isPrime(yourNumber));
+yourNumber = 2; //take input by prompt() for dynamically
+console.log(isPrime(yourNumber));
+yourNumber = 7; //take input by prompt() for dynamically
+console.log(isPrime(yourNumber));
+yourNumber = 49; //take input by prompt() for dynamically
+console.log(isPrime(yourNumber));
+yourNumber = 111; //take input by prompt() for dynamically
+console.log(isPrime(yourNumber));
+yourNumber = 119; //take input by prompt() for dynamically
+console.log(isPrime(yourNumber));
+yourNumber = 121; //take input by prompt() for dynamically
+console.log(isPrime(yourNumber));
+yourNumber = 245; //take input by prompt() for dynamically
+console.log(isPrime(yourNumber));
+
+//16. Write a functions which checks if all items are unique in the array.
+
+const isUniqueArray = (arr) => {
+  let duplicateItems = arr.filter((item, index) => {
+    return index !== arr.indexOf(item);
+  });
+
+  if (duplicateItems.length === 0) {
+    return `${arr} all the items are unique in the array`;
+  } else {
+    return `${arr} not unique in the array, duplicate Items are ${duplicateItems}`;
+  }
+};
+
+let anArray = [1, 1, 2, 3, 3, 3, 6, 7, 8, 9];
+console.log(isUniqueArray(anArray));
+
+anArray = [1, 2, 3, 6, 7, 8, 9];
+console.log(isUniqueArray(anArray));
+
+anArray = [1, 2, `aString`, 6, 7, 8, 9];
+console.log(isUniqueArray(anArray));
+
+anArray = [1, 1, 2, 3, 3, 3];
+console.log(isUniqueArray(anArray));
+
+//17. Write a function which checks if all the items of the array are the same data type.
+
+const checkDataType = (arr) => {
+  let dataType = typeof arr[0];
+
+  for (const item of arr) {
+    if (typeof item !== dataType) {
+      return `[${arr}] all the items not the same data type.`;
+      break;
+    }
+  }
+  return `[${arr}] all the items of the array are the same data type.`;
+};
+
+let anArray_ = [1, 2, 4];
+console.log(checkDataType(anArray_));
+
+anArray_ = [1, 2, "3", 4];
+console.log(checkDataType(anArray_));
+
+anArray_ = [1, 2, "afdsf", 4];
+console.log(checkDataType(anArray_));
+
+anArray_ = ["a", "b", "c", "d", "e", "f"];
+console.log(checkDataType(anArray_));
+
+anArray_ = ["a", "b", 1, "e", "f"];
+console.log(checkDataType(anArray_));
+
+anArray_ = [2, "b", "e", "f"];
+console.log(checkDataType(anArray_));
+
+anArray_ = ["a", "b", "c", "d", "e", 55];
+console.log(checkDataType(anArray_));
+
+//18. JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
+
+const isValidVariable = () => {
+
+  // let variableName = prompt(`Enter a variable name :`)
+  let variableName = "#aVariableName"; //take input by prompt() for dynamically
+
+  let firstLetter = variableName.charAt(0);
+  // console.log(firstLetter);
+
+  let specialCharacter = `&+,:;=?@#|'<>.^*"()'%!-1234567890`;
+
+  if (specialCharacter.includes(firstLetter)) {
+    console.log(`${variableName} is an invalid variable name`);
+  } else {
+    console.log(`${variableName} is a valid variable name`);
+  }
+};
+
+isValidVariable();
 
 
+//19. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
 
+const sevenRandomNumbers = () => {
+  let numbers = [], uniqueRandomNumbers = []
+  for (let i = 0; 6 >= uniqueRandomNumbers.length; i++) {
+    let randomNumber = Math.floor(Math.random() * 10)
+    numbers.push(randomNumber)
+    // console.log(`numbers`, numbers);
 
+    uniqueRandomNumbers = [... new Set(numbers)]
+    // console.log(`uniqueRandomNumbers`,uniqueRandomNumbers);
+  }
 
+  return uniqueRandomNumbers
+}
 
+console.log(`seven unique random numbers in a range of 0-9 :`,sevenRandomNumbers());
 
+//20. Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
 
+const reverseCountries = (countries) => {
+  let copyCountries = [... countries] //copy countries array to copyCountries array
 
+  return copyCountries.sort().reverse() //reverse
+}
 
+let countries =['USA', 'Switzerland', 'Albania', 'Turkey', 'Canada']
 
-
-
-
-
-
-
-
-
+console.log(`original array of countries :`, countries);
+console.log(`reverse of the original array :`, reverseCountries(countries));
