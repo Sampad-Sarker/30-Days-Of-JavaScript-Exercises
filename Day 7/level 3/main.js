@@ -597,7 +597,6 @@ const sevenRandomNumbers = () => {
     let randomNumber = Math.floor(Math.random() * 10)
     numbers.push(randomNumber)
     // console.log(`numbers`, numbers);
-
     uniqueRandomNumbers = [... new Set(numbers)]
     // console.log(`uniqueRandomNumbers`,uniqueRandomNumbers);
   }
@@ -611,7 +610,6 @@ console.log(`seven unique random numbers in a range of 0-9 :`,sevenRandomNumbers
 
 const reverseCountries = (countries) => {
   let copyCountries = [... countries] //copy countries array to copyCountries array
-
   return copyCountries.sort().reverse() //reverse
 }
 
