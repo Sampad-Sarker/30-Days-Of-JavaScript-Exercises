@@ -1,6 +1,5 @@
 //1. Use the countries information, in the data folder. Sort countries by name, by capital, by population
 
-// console.log(allCountries);
 
 allCountries;
 let countriesByName = allCountries.sort((a, b) => {
@@ -20,7 +19,7 @@ let countriesByName = allCountries.sort((a, b) => {
 
 console.log(`Sort countries(ascending order) by name :`);
 countriesByName.forEach((country, index) => {
-  // console.log(`${index + 1}. ${country.name.common}`)
+  console.log(`${index + 1}. ${country.name.common}`)
 });
 
 let countriesByCapital = allCountries.sort((a, b) => {
@@ -40,7 +39,7 @@ let countriesByCapital = allCountries.sort((a, b) => {
 console.log(`Sort countries(ascending order) by capital :`);
 
 countriesByCapital.forEach((country, index) => {
-  // console.log(`${index + 1}. name :${country.name.common} =>➡ capital :${country.capital}`);
+  console.log(`${index + 1}. name :${country.name.common} => capital :${country.capital}`);
   // console.table(country.name.common, country.capital);
 });
 
@@ -61,7 +60,7 @@ let countriesByPopulation = allCountries.sort((a, b) => {
 
 console.log(`Sort countries(ascending order) by population :`);
 countriesByPopulation.forEach((country, index) => {
-  // console.log(`${index + 1}. name :${country.name.common} 👉population :${country.population}`);
+  console.log(`${index + 1}. name :${country.name.common} 👉population :${country.population}`);
 });
 
 //2. Find the 10 most spoken languages:
@@ -222,63 +221,62 @@ const sumFunction = () => {
 };
 
 const minFunction = () => {
- return Math.min(...ages)
+  return Math.min(...ages);
 };
 
 const maxFunction = () => {
-  return Math.max(...ages)
-}
+  return Math.max(...ages);
+};
 
 const rangeFunction = () => {
-  return maxFunction() - minFunction()
-}
+  return maxFunction() - minFunction();
+};
 
 const meanFunction = () => {
-  return (sumFunction() / countFunction())
-}
+  return sumFunction() / countFunction();
+};
 
 const medianFunction = () => {
-
-  ages.sort((a,b)=> a-b) //sorting ascending order
+  ages.sort((a, b) => a - b); //sorting ascending order
 
   if (countFunction() % 2 !== 0) {
-    let position = (countFunction() + 1) / 2;   
-    let median = ages[position - 1]
-    return median 
+    let position = (countFunction() + 1) / 2;
+    let median = ages[position - 1];
+    return median;
   } else {
-    let positionOne = countFunction() / 2
-    let positionTwo = positionOne + 1
+    let positionOne = countFunction() / 2;
+    let positionTwo = positionOne + 1;
 
-    let median = (ages[positionOne - 1] + ages[positionTwo - 1]) / 2
+    let median = (ages[positionOne - 1] + ages[positionTwo - 1]) / 2;
 
-    return median
+    return median;
   }
-}
+};
 
 const modeFunction = () => {
-  const uniqueAges = [ ... new Set(ages)]
-  let ageInfos = []
+  const uniqueAges = [...new Set(ages)];
+  let ageInfos = [];
   for (const age of uniqueAges) {
-    let eachAge = ages.filter(eachAge => eachAge === age)
+    let eachAge = ages.filter((eachAge) => eachAge === age);
 
     let eachAgeInfo = {
-      mode : eachAge[0],
-      count : eachAge.length
-    }
+      mode: eachAge[0],
+      count: eachAge.length,
+    };
 
-    ageInfos.push(eachAgeInfo)
+    ageInfos.push(eachAgeInfo);
   }
 
-  const descendingSorting = (a,b) => {
+  const descendingSorting = (a, b) => {
     let fa = a.count,
-    fb = b.count
+      fb = b.count;
 
-    if (fa > fb) return -1
-    if (fa < fb) return 1
-    return 0
-  }
+    if (fa > fb) return -1;
+    if (fa < fb) return 1;
+    return 0;
+  };
 
-  ageInfos.sort(descendingSorting)
+  ageInfos.sort(descendingSorting);
 
   // ageInfos.sort((a,b)=>{
   //   let fa = a.count,
@@ -289,74 +287,63 @@ const modeFunction = () => {
   //   return 0
   // })
 
-
-  return ageInfos[0]
-
-}
-
-const varianceFunction = () => {
-  let mean = meanFunction(), sum = 0
-
-  for (const age of ages) {
-    sum += (age - mean) ** 2
-  }
-  const variance = sum / countFunction()
-
-  return variance
-}
-
-const standardDeviationFunction = () =>{
-  let std = Math.sqrt(varianceFunction()).toFixed(2)
-  return std
-}
-
-const frequencyDistributionFunction = () => {
-  const uniqueAges = [ ... new Set(ages)]
-  let ageInfos = []
-  for (const age of uniqueAges) {
-    let eachAge = ages.filter(eachAge => eachAge === age)
-
-    // let eachAgeInfo = {
-    //   mode : eachAge[0],
-    //   count : eachAge.length
-    // }
-    let eachAgeInfo = `(${eachAge[0]}, ${eachAge.length})`
-
-    ageInfos.push(eachAgeInfo)
-  }
-
-  return ageInfos
-}
-
-
-statistics = {
-  count : countFunction,
-  sum : sumFunction,
-  min : minFunction,
-  max : maxFunction,
-  range : rangeFunction,
-  mean : meanFunction,
-  median : medianFunction,
-  mode : modeFunction,
-  variance : varianceFunction,
-  standardDeviation : standardDeviationFunction,
-  frequencyDistribution : frequencyDistributionFunction
+  return ageInfos[0];
 };
 
+const varianceFunction = () => {
+  let mean = meanFunction(),
+    sum = 0;
+
+  for (const age of ages) {
+    sum += (age - mean) ** 2;
+  }
+  const variance = sum / countFunction();
+
+  return variance;
+};
+
+const standardDeviationFunction = () => {
+  let std = Math.sqrt(varianceFunction()).toFixed(2);
+  return std;
+};
+
+const frequencyDistributionFunction = () => {
+  const uniqueAges = [...new Set(ages)];
+  let ageInfos = [];
+  for (const age of uniqueAges) {
+    let eachAge = ages.filter((eachAge) => eachAge === age);
+
+    let eachAgeInfo = `(${eachAge[0]}, ${eachAge.length})`;
+
+    ageInfos.push(eachAgeInfo);
+  }
+
+  return ageInfos;
+};
+
+statistics = {
+  count: countFunction,
+  sum: sumFunction,
+  min: minFunction,
+  max: maxFunction,
+  range: rangeFunction,
+  mean: meanFunction,
+  median: medianFunction,
+  mode: modeFunction,
+  variance: varianceFunction,
+  standardDeviation: standardDeviationFunction,
+  frequencyDistribution: frequencyDistributionFunction,
+};
 
 // console.log(ages.sort()[0])
-console.log('Count:', statistics.count()) // 25
-console.log('Sum: ', statistics.sum()) // 744
-console.log('Min: ', statistics.min()) // 24
-console.log('Max: ', statistics.max()) // 38
-console.log('Range: ', statistics.range()) // 14
-console.log('Mean: ', statistics.mean()) // 30
-console.log('Median: ',statistics.median()) // 29
-console.log('Mode: ', statistics.mode()) // {'mode': 26, 'count': 5}
-console.log('Variance: ',statistics.variance()) // 17.5
-console.log('Standard Deviation: ', statistics.standardDeviation()) // 4.2
-console.log('Frequency Distribution: ',statistics.frequencyDistribution())
-
-
-
-
+console.log("Count:", statistics.count()); // 25
+console.log("Sum: ", statistics.sum()); // 744
+console.log("Min: ", statistics.min()); // 24
+console.log("Max: ", statistics.max()); // 38
+console.log("Range: ", statistics.range()); // 14
+console.log("Mean: ", statistics.mean()); // 30
+console.log("Median: ", statistics.median()); // 29
+console.log("Mode: ", statistics.mode()); // {'mode': 26, 'count': 5}
+console.log("Variance: ", statistics.variance()); // 17.5
+console.log("Standard Deviation: ", statistics.standardDeviation()); // 4.2
+console.log("Frequency Distribution: ", statistics.frequencyDistribution());
