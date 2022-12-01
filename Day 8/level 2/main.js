@@ -155,7 +155,7 @@ console.log(`all the values of users object :`, allValues);
 
 //source url = https://restcountries.com/v3.1/all
 
-//comment out Antarctica, otherwise not to get all country info 
+
 let countries = [
     {
       name: {
@@ -2756,80 +2756,80 @@ let countries = [
       startOfWeek: "monday",
       capitalInfo: { latlng: [53.32, -6.23] },
     },
-    // {
-    //   name: { common: "Antarctica", official: "Antarctica" },
-    //   tld: [".aq"],
-    //   cca2: "AQ",
-    //   ccn3: "010",
-    //   cca3: "ATA",
-    //   independent: false,
-    //   status: "officially-assigned",
-    //   unMember: false,
-    //   idd: {},
-    //   altSpellings: ["AQ"],
-    //   region: "Antarctic",
-    //   translations: {
-    //     ara: { official: "أنتارتيكا", common: "أنتارتيكا" },
-    //     bre: { official: "Antarktika", common: "Antarktika" },
-    //     ces: { official: "Antarktida", common: "Antarktida" },
-    //     cym: { official: "Yr Antarctig", common: "Yr Antarctig" },
-    //     deu: { official: "Antarktika", common: "Antarktis" },
-    //     est: { official: "Antarktika", common: "Antarktika" },
-    //     fin: { official: "Etelämanner", common: "Etelämanner" },
-    //     fra: { official: "Antarctique", common: "Antarctique" },
-    //     hrv: { official: "Antarktika", common: "Antarktika" },
-    //     hun: { official: "Antarktisz", common: "Antarktisz" },
-    //     ita: { official: "Antartide", common: "Antartide" },
-    //     jpn: { official: "南極大陸", common: "南極" },
-    //     kor: { official: "남극", common: "남극" },
-    //     nld: { official: "Antarctica", common: "Antarctica" },
-    //     per: { official: "جنوبگان", common: "جنوبگان" },
-    //     pol: { official: "Antarktyka", common: "Antarktyka" },
-    //     por: { official: "Antártica", common: "Antártida" },
-    //     rus: { official: "Антарктида", common: "Антарктида" },
-    //     slk: { official: "Antarktída", common: "Antarktída" },
-    //     spa: { official: "Antártida", common: "Antártida" },
-    //     swe: { official: "Antarktis", common: "Antarktis" },
-    //     tur: { official: "Antarktika", common: "Antarktika" },
-    //     urd: { official: "انٹارکٹکا", common: "انٹارکٹکا" },
-    //     zho: { official: "南极洲", common: "南极洲" },
-    //   },
-    //   latlng: [-90.0, 0.0],
-    //   landlocked: false,
-    //   area: 1.4e7,
-    //   demonyms: {
-    //     eng: { f: "Antarctican", m: "Antarctican" },
-    //     fra: { f: "Antarcticaine", m: "Antarcticain" },
-    //   },
-    //   flag: "\uD83C\uDDE6\uD83C\uDDF6",
-    //   maps: {
-    //     googleMaps: "https://goo.gl/maps/kyBuJriu4itiXank7",
-    //     openStreetMaps: "https://www.openstreetmap.org/node/36966060",
-    //   },
-    //   population: 1000,
-    //   car: { signs: [""], side: "right" },
-    //   timezones: [
-    //     "UTC-03:00",
-    //     "UTC+03:00",
-    //     "UTC+05:00",
-    //     "UTC+06:00",
-    //     "UTC+07:00",
-    //     "UTC+08:00",
-    //     "UTC+10:00",
-    //     "UTC+12:00",
-    //   ],
-    //   continents: ["Antarctica"],
-    //   flags: {
-    //     png: "https://flagcdn.com/w320/aq.png",
-    //     svg: "https://flagcdn.com/aq.svg",
-    //   },
-    //   coatOfArms: {
-    //     png: "https://mainfacts.com/media/images/coats_of_arms/aq.png",
-    //     svg: "https://mainfacts.com/media/images/coats_of_arms/aq.svg",
-    //   },
-    //   startOfWeek: "monday",
-    //   capitalInfo: {},
-    // },
+    {
+      name: { common: "Antarctica", official: "Antarctica" },
+      tld: [".aq"],
+      cca2: "AQ",
+      ccn3: "010",
+      cca3: "ATA",
+      independent: false,
+      status: "officially-assigned",
+      unMember: false,
+      idd: {},
+      altSpellings: ["AQ"],
+      region: "Antarctic",
+      translations: {
+        ara: { official: "أنتارتيكا", common: "أنتارتيكا" },
+        bre: { official: "Antarktika", common: "Antarktika" },
+        ces: { official: "Antarktida", common: "Antarktida" },
+        cym: { official: "Yr Antarctig", common: "Yr Antarctig" },
+        deu: { official: "Antarktika", common: "Antarktis" },
+        est: { official: "Antarktika", common: "Antarktika" },
+        fin: { official: "Etelämanner", common: "Etelämanner" },
+        fra: { official: "Antarctique", common: "Antarctique" },
+        hrv: { official: "Antarktika", common: "Antarktika" },
+        hun: { official: "Antarktisz", common: "Antarktisz" },
+        ita: { official: "Antartide", common: "Antartide" },
+        jpn: { official: "南極大陸", common: "南極" },
+        kor: { official: "남극", common: "남극" },
+        nld: { official: "Antarctica", common: "Antarctica" },
+        per: { official: "جنوبگان", common: "جنوبگان" },
+        pol: { official: "Antarktyka", common: "Antarktyka" },
+        por: { official: "Antártica", common: "Antártida" },
+        rus: { official: "Антарктида", common: "Антарктида" },
+        slk: { official: "Antarktída", common: "Antarktída" },
+        spa: { official: "Antártida", common: "Antártida" },
+        swe: { official: "Antarktis", common: "Antarktis" },
+        tur: { official: "Antarktika", common: "Antarktika" },
+        urd: { official: "انٹارکٹکا", common: "انٹارکٹکا" },
+        zho: { official: "南极洲", common: "南极洲" },
+      },
+      latlng: [-90.0, 0.0],
+      landlocked: false,
+      area: 1.4e7,
+      demonyms: {
+        eng: { f: "Antarctican", m: "Antarctican" },
+        fra: { f: "Antarcticaine", m: "Antarcticain" },
+      },
+      flag: "\uD83C\uDDE6\uD83C\uDDF6",
+      maps: {
+        googleMaps: "https://goo.gl/maps/kyBuJriu4itiXank7",
+        openStreetMaps: "https://www.openstreetmap.org/node/36966060",
+      },
+      population: 1000,
+      car: { signs: [""], side: "right" },
+      timezones: [
+        "UTC-03:00",
+        "UTC+03:00",
+        "UTC+05:00",
+        "UTC+06:00",
+        "UTC+07:00",
+        "UTC+08:00",
+        "UTC+10:00",
+        "UTC+12:00",
+      ],
+      continents: ["Antarctica"],
+      flags: {
+        png: "https://flagcdn.com/w320/aq.png",
+        svg: "https://flagcdn.com/aq.svg",
+      },
+      coatOfArms: {
+        png: "https://mainfacts.com/media/images/coats_of_arms/aq.png",
+        svg: "https://mainfacts.com/media/images/coats_of_arms/aq.svg",
+      },
+      startOfWeek: "monday",
+      capitalInfo: {},
+    },
     {
       name: {
         common: "Australia",
@@ -23557,8 +23557,10 @@ let countries = [
 let count = 0
 console.log(`print country name, capital, populations and languages :`)
 for (const country of countries) {
-
-    console.log(`${++count}. country name :${country.name.common}\ncapital :${country.capital}\npopulations :${country.population}\nlanguages :${Object.values(country.languages)}`)
+    if(country.languages){ //because ,antarctica has no particular language
+      console.log(`${++count}. country name :${country.name.common}\ncapital :${country.capital}\npopulations :${country.population}\nlanguages :${Object.values(country.languages)}`)
+    
+    }
 
 }
 
