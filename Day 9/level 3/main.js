@@ -1,6 +1,5 @@
 //1. Use the countries information, in the data folder. Sort countries by name, by capital, by population
 
-
 allCountries;
 let countriesByName = allCountries.sort((a, b) => {
   let fa = a.name.common.toLowerCase(),
@@ -19,7 +18,7 @@ let countriesByName = allCountries.sort((a, b) => {
 
 console.log(`Sort countries(ascending order) by name :`);
 countriesByName.forEach((country, index) => {
-  console.log(`${index + 1}. ${country.name.common}`)
+  console.log(`${index + 1}. ${country.name.common}`);
 });
 
 let countriesByCapital = allCountries.sort((a, b) => {
@@ -39,7 +38,9 @@ let countriesByCapital = allCountries.sort((a, b) => {
 console.log(`Sort countries(ascending order) by capital :`);
 
 countriesByCapital.forEach((country, index) => {
-  console.log(`${index + 1}. name :${country.name.common} => capital :${country.capital}`);
+  console.log(
+    `${index + 1}. name :${country.name.common} => capital :${country.capital}`
+  );
   // console.table(country.name.common, country.capital);
 });
 
@@ -60,7 +61,11 @@ let countriesByPopulation = allCountries.sort((a, b) => {
 
 console.log(`Sort countries(ascending order) by population :`);
 countriesByPopulation.forEach((country, index) => {
-  console.log(`${index + 1}. name :${country.name.common} 👉population :${country.population}`);
+  console.log(
+    `${index + 1}. name :${country.name.common} 👉population :${
+      country.population
+    }`
+  );
 });
 
 //2. Find the 10 most spoken languages:
@@ -209,9 +214,11 @@ const ages = [
   31, 34, 24, 33, 29, 26,
 ];
 
+//number of samples
 const countFunction = () => {
   return ages.length;
 };
+//total value of all the samples
 const sumFunction = () => {
   let sum = 0;
   for (const age of ages) {
@@ -219,23 +226,30 @@ const sumFunction = () => {
   }
   return sum;
 };
-
+//minimum value among the samples
 const minFunction = () => {
   return Math.min(...ages);
 };
-
+//maximum value among the samples
 const maxFunction = () => {
   return Math.max(...ages);
 };
+//range = maximum value - minimum value
 
 const rangeFunction = () => {
   return maxFunction() - minFunction();
 };
-
+/*
+    mean also known as average
+    mean = total value / number of samples
+  */
 const meanFunction = () => {
   return sumFunction() / countFunction();
 };
-
+/*
+  if number of samples is odd then median is the middle value of the samples
+  if number of samples is even then median is the average of two middle values of the samples
+  */
 const medianFunction = () => {
   ages.sort((a, b) => a - b); //sorting ascending order
 
@@ -252,7 +266,9 @@ const medianFunction = () => {
     return median;
   }
 };
-
+/*
+  mode is defined as the value that has a higher frequency(appearing number) in a given set of samples.
+  */
 const modeFunction = () => {
   const uniqueAges = [...new Set(ages)];
   let ageInfos = [];
@@ -289,7 +305,12 @@ const modeFunction = () => {
 
   return ageInfos[0];
 };
+/*
+  The variance is squared of difference between each sample and average of the samples and divide it by the number of samples
+  
+  variance = ((total(eachNumber - average)) ** 2) / number of samples
 
+  */
 const varianceFunction = () => {
   let mean = meanFunction(),
     sum = 0;
@@ -301,12 +322,15 @@ const varianceFunction = () => {
 
   return variance;
 };
-
+/*
+  Standard deviation is the square root of the variance
+  */
 const standardDeviationFunction = () => {
   let std = Math.sqrt(varianceFunction()).toFixed(2);
   return std;
 };
-
+//maybe
+//number of appearance of each sample
 const frequencyDistributionFunction = () => {
   const uniqueAges = [...new Set(ages)];
   let ageInfos = [];
