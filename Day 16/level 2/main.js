@@ -21,4 +21,4 @@ const student = {
 
 const jsonStudent = JSON.stringify(student, ['firstName','lastName','skills'],2)
 
-console.log(jsonStudent);
+console.log('Stringify the students object with only firstName, lastName and skills properties :\n',jsonStudent);

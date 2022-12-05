@@ -8,8 +8,8 @@ const skills = ['HTML', 'CSS', 'JS', 'React','Node', 'Python']
 
 const jsonText = JSON.stringify(skills, null, 2)
 
-console.log(`object\n ${skills}`);
-console.log(`JSON\n ${jsonText}`);
+console.log(`object :\n ${skills}`);
+console.log(`JSON :\n ${jsonText}`);
 
 
 
@@ -23,7 +23,7 @@ let age = 250;
 
 const jsonAge = JSON.stringify(age);
 
-console.log(jsonAge);
+console.log('Stringify the age variable :\n',jsonAge);
 
 
 /*
@@ -38,7 +38,7 @@ const isMarriedJson = JSON.stringify(isMarried);
 // const isMarriedJson = JSON.stringify({isMarried : true});
 
 
-console.log(isMarriedJson);
+console.log('Stringify the isMarried variable :\n',isMarriedJson);
 
 
 
@@ -65,5 +65,5 @@ const student = {
 
 const studentJson = JSON.stringify(student);
 
-console.log(studentJson);
+console.log('Stringify the student object :\n',studentJson);
 
