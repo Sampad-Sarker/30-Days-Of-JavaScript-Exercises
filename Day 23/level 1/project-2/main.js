@@ -37,7 +37,6 @@ spanInParagraph.setAttribute("id", "keyName");
 keyParagraph.appendChild(spanInParagraph);
 
 document.querySelector("span").style.color = "#21bf73";
-
 //keyboard class style end
 
 //keycode class style start
