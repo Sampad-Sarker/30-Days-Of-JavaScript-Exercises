@@ -12,13 +12,13 @@ wrapper.style.gap = "0.35rem";
 
 //input and button
 let inputOfNumber = document.querySelector("input");
-inputOfNumber.style.border = "2px solid green";
+inputOfNumber.style.border = "2px solid #21bf73";
 inputOfNumber.style.padding = "0.5rem 1rem";
 const p = document.querySelector("p");
 const button = document.querySelector("button");
 button.style.color = "#fff";
-button.style.backgroundColor = "green";
-button.style.border = "2px solid green";
+button.style.backgroundColor = "#21bf73";
+button.style.border = "2px solid #21bf73";
 button.style.padding = "0.5rem 1rem";
 
 let numberRange;
