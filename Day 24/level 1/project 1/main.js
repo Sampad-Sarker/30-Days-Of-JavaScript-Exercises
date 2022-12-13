@@ -31,8 +31,8 @@ const gravityOfPlanets = [
 ];
 
 button.addEventListener("click", () => {
-  console.log("massValue =", mass.value);
-  console.log("select value =", document.querySelector("select").value);
+  // console.log("massValue =", mass.value);
+  // console.log("select value =", document.querySelector("select").value);
 
   if (
     mass.value.length === 0 &&
@@ -131,10 +131,9 @@ button.addEventListener("click", () => {
       const p = document.createElement("p");
       p.style.color = "#fff";
       // p.textContent = `The weight of the object on ${selectValue.toUpperCase()}`;
-      p.innerHTML = `The weight of the object on <span style = font-weight:900;>${selectValue.toUpperCase()}</span>`;
-
-      p.style.fontSize = "1rem";
       // p.style.fontWeight = "900";
+      p.innerHTML = `The weight of the object on <span style = font-weight:900;>${selectValue.toUpperCase()}</span>`;
+      p.style.fontSize = "1rem";
       p.style.margin = "0";
       outerDiv.appendChild(p);
       const innerDiv = document.createElement("div");
