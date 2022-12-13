@@ -41,8 +41,10 @@ button.addEventListener("click", () => {
     console.log(`Mass and planet is required`);
     // image.removeChild(img);
     image.textContent = "";
+    description.textContent = "";
+
     const div = document.createElement("div");
-    div.style.padding = "0.5rem 6rem";
+    div.style.padding = "0.5rem 1rem";
     div.style.backgroundColor = "#21212150";
     const p = document.createElement("p");
     p.style.color = "#fff";
@@ -58,8 +60,10 @@ button.addEventListener("click", () => {
     console.log(`Mass is required`);
     // image.removeChild(img);
     image.textContent = "";
+    description.textContent = "";
+
     const div = document.createElement("div");
-    div.style.padding = "0.5rem 6rem";
+    div.style.padding = "0.5rem 1rem";
     div.style.backgroundColor = "#21212150";
     const p = document.createElement("p");
     p.style.color = "#fff";
@@ -75,8 +79,10 @@ button.addEventListener("click", () => {
     console.log(`You did not choose a planet yet`);
     // image.removeChild(img);
     image.textContent = "";
+    description.textContent = "";
+
     const div = document.createElement("div");
-    div.style.padding = "0.5rem 6rem";
+    div.style.padding = "0.5rem 1rem";
     div.style.backgroundColor = "#21212150";
     const p = document.createElement("p");
     p.style.color = "#fff";
@@ -90,8 +96,9 @@ button.addEventListener("click", () => {
       console.log(`negative value of mass is not possible`);
       // image.removeChild(img);
       image.textContent = "";
+      description.textContent = "";
       const div = document.createElement("div");
-      div.style.padding = "0.5rem 6rem";
+      div.style.padding = "0.5rem 1rem";
       div.style.backgroundColor = "#21212150";
       const p = document.createElement("p");
       p.style.color = "#fff";
