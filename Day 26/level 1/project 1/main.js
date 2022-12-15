@@ -3,7 +3,7 @@ document.querySelector("#number").textContent = countries.length;
 const wrapper = document.querySelector(".wrapper");
 
 const searchValue = document.querySelector("#search");
-console.log("searchValue ===", searchValue.value);
+
 //default always display
 countries.forEach((country) => {
   const div = document.createElement("div");
