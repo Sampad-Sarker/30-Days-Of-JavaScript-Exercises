@@ -49,8 +49,11 @@ skill.style.fontSize = "2.5rem";
 skill.style.fontWeight = "900";
 let indexOfKeywords = 0;
 let indexOfColors = 0;
+
 setInterval(() => {
   skill.textContent = `${keywords[indexOfKeywords]}`;
+  skill.style.animationDuration = "1500ms";
+
   ++indexOfKeywords;
   if (indexOfKeywords === keywords.length) {
     indexOfKeywords = 0;
