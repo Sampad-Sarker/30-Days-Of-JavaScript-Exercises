@@ -10,6 +10,7 @@ const devs = document.querySelector(".devs");
 //storing all scoreId and value
 let scoreSets = [];
 
+//initial uniqueId
 let uniqueIdOfDev = 0;
 let uniqueIdOfScore = 0;
 let uniqueIdOfDeleteButton = 0;
@@ -17,7 +18,8 @@ let uniqueIdOfAdd5 = 0;
 let uniqueIdOfMinus5 = 0;
 
 addButton.addEventListener("click", () => {
-  console.log(`clicked `);
+  // console.log(`clicked `);
+  //when no field are inputted
   redMessage.textContent = "";
   if (
     firstName.value === "" ||
@@ -28,8 +30,10 @@ addButton.addEventListener("click", () => {
     redMessage.textContent = "all fields are required";
   }
 
+  //when all fields are inputted
   if (firstName.value && lastName.value && country.value && score.value) {
-    console.log("all fields are filled");
+    // console.log("all fields are filled");
+
     const div = document.createElement("div");
     div.setAttribute("class", "dev");
     div.setAttribute("id", `dev-${++uniqueIdOfDev}`);
@@ -87,7 +91,26 @@ addButton.addEventListener("click", () => {
     iconGroup.appendChild(add5);
     iconGroup.appendChild(minus5);
 
-    devs.appendChild(div);
+    //unsorted arrange
+    devs.appendChild(div); //have to append to get devs div later
+    devs.style.display = "none"; //don't show the unsorted arrange
+
+    //sorted arrange
+    if (scoreSets.length) {
+      //descending order
+      scoreSets.sort((a, b) => b.scoreValue - a.scoreValue);
+      // console.log("scoreSets ==", scoreSets);
+      scoreSets.forEach((score) => {
+        const { scoreId } = score;
+        const uniqueId = scoreId.slice(6);
+        // console.log("uniqueId >>>>", uniqueId);
+        const dev = document.querySelector(`#dev-${uniqueId}`);
+        // console.log(dev);
+        devs.appendChild(dev);
+        devs.style.display = "flex"; //show the sorted arrange
+      });
+    }
+
     // ===================================================================
     //delete button start
     deleteButton.addEventListener("click", () => {
@@ -101,6 +124,7 @@ addButton.addEventListener("click", () => {
       console.log(document.querySelector(`#dev-${idOfDev}`));
       //delete
       document.querySelector(`#dev-${idOfDev}`).textContent = "";
+      document.querySelector(`#dev-${idOfDev}`).style.display = "none"; //remove space
     });
     //delete button end
 
@@ -134,8 +158,6 @@ addButton.addEventListener("click", () => {
     });
     //minus5 button end
 
-    //arranging based on score
-
     //reset input value
     firstName.value = "";
     lastName.value = "";
@@ -152,7 +174,7 @@ sorting.addEventListener("click", () => {
     redMessage.textContent = "";
     if (!isArranged) {
       scoreSets.sort((a, b) => b.scoreValue - a.scoreValue);
-      console.log(">>>>", scoreSets);
+      // console.log(">>>>", scoreSets);
 
       redMessage.textContent = "descending order sorting";
 
