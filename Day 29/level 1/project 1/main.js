@@ -1,3 +1,7 @@
+document.body.style.textAlign = "center";
+document.body.style.maxHeight = "100vh";
+document.body.style.padding = "2%";
+
 const fontWeightSet = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 const fontFamilySet = [
   "Arial",
@@ -15,8 +19,9 @@ const fontFamilySet = [
 const text = document.createElement("h1");
 text.textContent = `30 days of javascript challenge 2020 asabeneh yetayeh`;
 text.style.textTransform = "uppercase";
-text.style.fontSize = "7rem";
+text.style.fontSize = "calc(7rem + 1vw)";
 text.style.marginBottom = "0";
+text.style.wordBreak = "break-word";
 document.body.appendChild(text);
 
 //random color generator
@@ -56,6 +61,7 @@ setInterval(() => {
   //text animation start
   text.style.animationName = "textAnimay";
   text.style.animationDuration = "3000ms";
+  text.style.animationTimingFunction = "ease-in-out";
   text.style.animationIterationCount = "infinite";
   //text animation end
 
@@ -81,5 +87,5 @@ developed with <span style=display:inline-block; class="anime animate__animated 
 const footer = document.createElement("footer");
 footer.innerHTML = content;
 footer.style.textAlign = "center";
-footer.style.marginTop = "12%";
+footer.style.marginTop = "5%";
 document.body.appendChild(footer);
