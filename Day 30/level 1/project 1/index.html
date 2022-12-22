@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>🌏 World Countries</title>
+</head>
+
+<body>
+	<header id="countries">
+		<h2>World Countries Data</h2>
+		<p class="subtitle">Currently, we have <span id="numberOfCountries"></span> countries</p>
+		<p class="searchNumber"></p>
+		<a id="top"></a>
+	</header>
+
+	<main>
+		<div class="wrapper">
+			<div class="search-area">
+				<input type="text" id="search" placeholder="search countries by name, capital or population">
+				<div class="button-group">
+					<button id="countryName">name</button>
+					<!-- <button id="countryName">name <span class="arrowUp">⬆</span><span class="arrowDown">⬇</span></button> -->
+					<button id="capital">capital </button>
+					<!-- <button id="capital">capital <span class="arrowUp">⬆</span><span class="arrowDown">⬇</span></button> -->
+
+					<button id="population">population </button>
+					<!-- <button id="population">population <span class="arrowUp">⬆</span><span class="arrowDown">⬇</span></button> -->
+
+					<button id="sorting"><a href="#down"><img src="./images/bar-chart-svgrepo-com.svg" alt=""></a></button>
+					<!-- <button id="sorting"><a href="#down"><img src="./images/bar-chart-svgrepo-com.svg" alt=""></a></button> -->
+
+					<!-- <img id="sorting" src="./images/bar-chart-svgrepo-com.svg" alt="" srcset=""> -->
+				</div>
+			</div>
+
+			<div class="search-result">
+				<div class="country-wrapper">
+
+					<!-- <div class="country">
+						<div class="countryFlag">
+							<img src="https://via.placeholder.com/150" alt="">
+						</div>
+						<div class="countryName">AAA sdfdsf</div>
+						<div class="countryInfo">
+							<p class="countryCapital">capital:</p>
+							<p class="countryLanguages">languages:</p>
+							<p class="countryPopulation">population:</p>
+						</div>
+					</div> -->
+
+
+					<!-- <div class="country">
+						<div class="countryFlag"><img src="https://via.placeholder.com/150" alt=""></div>
+						<div class="countryName">AAA</div>
+						<div class="countryInfo">
+							<p class="countryCapital">capital:</p>
+							<p class="countryLanguages">languages:</p>
+							<p class="countryPopulation">population:</p>
+						</div>
+					</div> -->
+				</div>
+			</div>
+
+			<div class="graph-buttons">
+				<button class="population">population</button>
+				<button class="languages">languages</button>
+				<p class="graph-title"></p>
+				<a id="down"></a>
+			</div>
+
+			<div class="graphs">
+				<div class="graph-wrapper" id="stat">
+					<!-- <div class="property">
+						<p class="propertyName">propertyName</p>
+						<div class="bar-graph">
+							<div class="graph">bar</div>
+						</div>
+						<p class="propertyNumber">propertyNumber</p>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p>
+			developed with <span class="anime animate__animated animate__heartBeat animate__infinite">❤️</span> by <a
+				href="https://github.com/Sampad-Sarker" target="_blank">SampadSarker</a>
+		</p>
+		<a href="#top">
+			<img src="./images/up-arrow-svgrepo-com.svg" alt="">
+		</a>
+
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+
+</html>
